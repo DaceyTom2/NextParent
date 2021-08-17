@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = '[Your Name]'
+const name = 'Parent Project'
 export const siteTitle = 'Next.js Sample Website'
 
 export default function Layout({ children, home }) {
@@ -61,13 +61,21 @@ export default function Layout({ children, home }) {
         )}
       </header>
       <main>{children}</main>
-      {!home && (
+
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            <a>Home</a>
+          </Link>
+          <br />
+          <Link href="/parentPage">
+            <a>Parent Page</a>
+          </Link>
+          <br />
+          <Link href="/childPage">
+            <a>Child Page</a>
           </Link>
         </div>
-      )}
+      
     </div>
   )
 }

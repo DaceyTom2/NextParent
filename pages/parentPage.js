@@ -7,7 +7,17 @@ import Date from '../components/date'
 
 export default function parentPage({ allPostsData }) {
   return (
-    <p>parent</p>
+    <Layout parentPage>
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
+      <section className={utilStyles.headingMd}>
+        <p>This page is in the parent project</p>
+      </section>
+      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+        <h2 className={utilStyles.headingLg}>Pages</h2>
+      </section>
+    </Layout>
   )
 }
 
